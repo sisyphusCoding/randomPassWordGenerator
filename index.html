@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - random-PasswordGen</title>
+  <script src="https://kit.fontawesome.com/0bb7e00eac.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app">
+  <div class="front">
+    <h3>Random Password Generator</h3>
+    <form class="slider">
+      <label class="headie">Set the Password limit</label>
+      <input class="slider" id="myRange" type="range" min="4" max="20" value="5" name="passR" oninput="this.form.passN.value=this.value"/>
+      <input class="slider" id="pLimit" type="number" min="4" max="20" value="5" name="passN" oninput="this.form.passR.value=this.value"/>
+    </form>
+    <div class="uppercase">
+      <input id="uppercase" type="checkbox"/>
+      <label for="uppercase">uppercase</label><span class="tick"></span>
+    </div>
+    <div class="lowercase">
+      <input id="lowercase" type="checkbox"/>
+      <label for="lowercase">lowercase</label><span class="tick"></span>
+    </div>
+    <div class="number">
+      <input id="number" type="checkbox"/>
+      <label for="number">number</label><span class="tick"></span>
+    </div>
+    <div class="symbol">
+      <input id="symbol" type="checkbox"/>
+      <label for="symbol">symbol</label><span class="tick"></span>
+    </div>
+    <button class="generate">Generate Password</button>
+  </div>
+  <div class="back">
+    <div class="alertDone">
+      <h3>Copied to Clipboard !!</h3>
+    </div>
+    <div class="output-wrap">
+      <input id="genPass" type="text"/>
+      <button id="copyPass">Copy</button>
+    </div>
+    <button class="reGenerate"> <i class="fas fa-arrow-left"></i>
+      <h5>Generate New Password</h5>
+    </button>
+  </div>
+</div>
+<footer><a href="https://codepen.io/coding_anish" target="_blank" onclick="void(0);"><i class="fab fa-codepen"></i></a><a href="https://twitter.com/sisyphus_coding" target="_blank" onclick="void(0);"><i class="fab fa-twitter"></i></a></footer>
+<!-- partial -->
+  <script src='https://unpkg.com/react/umd/react.development.js'></script>
+<script src='https://unpkg.com/react-dom/umd/react-dom.development.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
